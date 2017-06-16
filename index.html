@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+     <a-entity rotation="0 45 0">
+       <a-scene>
+         <a-assets>
+           <img id="boxTexture" src="robat-logo.svg" alt="">
+           <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg" alt="sky">
+           <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" alt="floor">
+         </a-assets>
+         <a-image position="3 3 -5" src="robat-logo.svg"></a-image>
+         <a-torus-knot radius-tubular="0.1." position="-4 1.25 -5" radius="1"></a-torus-knot>
+         <a-dodecahedron position="4 1.25 -5"></a-dodecahedron>
+         <a-text position="0 3 -5" align="center" value="Hello, World!" color="black"></a-text>
+         <a-box position="-1 4 -5" rotation="0 45 0" src="#boxTexture"></a-box>
+         <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E">
+           <a-ring position="0 1.25 -5"></a-ring>
+         </a-sphere>
+         <a-cylinder position="0 1 -3" rotation="90 90 90" radius="0.35" height="1.5" color="#FFC65D"></a-cylinder>
+         <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
+         <a-sky src="#skyTexture"></a-sky>
+       </a-scene>
+     </a-entity>
+  </body>
+</html>
